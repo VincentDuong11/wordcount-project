@@ -1,0 +1,15 @@
+<h1> Here is your text:</h1>
+
+{{fulltext}}
+
+<h1>Your text has {{count}} words counted</h1>
+
+<h1>List of word that are counted from highest</h1>
+
+<a href='{% url 'home' %}'>New Count</a>
+<br/>
+  {% for word, counted in sortedWords %}
+
+  {{word}} - {{counted}}<br/>
+
+  {%endfor%}
